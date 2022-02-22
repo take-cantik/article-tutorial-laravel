@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
-    public function __invoke(Request $request) :View
+    public function __invoke(Request $request): View
     {
         // return view();
     }
