@@ -5,7 +5,7 @@ namespace App\Usecases\Article;
 use App\Repositories\ArticleRepositoryInterface;
 use App\Http\Dtos\Article\CreateDto;
 
-class CreateUsecase
+class StoreUsecase
 {
     private ArticleRepositoryInterface $articleRepository;
 
