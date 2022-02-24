@@ -7,10 +7,11 @@ use Illuminate\View\View;
 use App\Http\Requests\Article\GetListRequest;
 use App\Usecases\Article\IndexUsecase;
 use App\Http\Dtos\Article\GetListDto;
+use App\Http\Presenters\Article\IndexPresenter;
 
 class IndexController extends Controller
 {
-    public function __invoke(GetListRequest $request, IndexUsecase $indexUsecase): View
+    public function __invoke(GetListRequest $request, IndexUsecase $indexUsecase, IndexPresenter $presenter): View
     {
         $getListDto = new GetListDto([
             'page' => $request->page,
@@ -18,8 +19,6 @@ class IndexController extends Controller
 
         $articles = $indexUsecase->execute($getListDto);
 
-        dd($articles);
-
-        return view();
+        return view()->with(['articles' => $presenter->output($articles)]);
     }
 }

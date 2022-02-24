@@ -25,37 +25,37 @@ class Article
         if (isset($object->updated_at)) $this->updatedAt = $object->updated_at;
     }
 
-    private function getId()
+    public function getId()
     {
         return $this->id;
     }
 
-    private function getTitle()
+    public function getTitle()
     {
         return $this->title;
     }
 
-    private function getBody()
+    public function getBody()
     {
         return $this->body;
     }
 
-    private function getCategory()
+    public function getCategory()
     {
         return $this->category;
     }
 
-    private function getAuthorId()
+    public function getAuthor()
     {
-        return $this->authorId;
+        return $this->author;
     }
 
-    private function getCreatedAt()
+    public function getCreatedAt()
     {
         return $this->createdAt;
     }
 
-    private function getUpdatedAt()
+    public function getUpdatedAt()
     {
         return $this->updatedAt;
     }
