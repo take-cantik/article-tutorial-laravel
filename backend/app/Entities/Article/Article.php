@@ -2,25 +2,27 @@
 
 namespace App\Entities\Article;
 
+use App\Entities\User\User;
+
 class Article
 {
     private int $id;
     private string $title;
     private string $body;
     private int $category;
-    private int $authorId;
+    private User $author;
     private string $createdAt;
     private string $updateAt;
 
-    private function __construct(object $article)
+    private function __construct(object $object)
     {
-        if (isset($article->id)) $this->id = $article->id;
-        if (isset($article->title)) $this->title = $article->title;
-        if (isset($article->body)) $this->body = $article->body;
-        if (isset($article->category)) $this->category = $article->category;
-        if (isset($article->user_id)) $this->authorId = $article->user_id;
-        if (isset($article->created_at)) $this->createdAt = $article->created_at;
-        if (isset($article->updated_at)) $this->updatedAt = $article->updated_at;
+        if (isset($object->id)) $this->id = $object->id;
+        if (isset($object->title)) $this->title = $object->title;
+        if (isset($object->body)) $this->body = $object->body;
+        if (isset($object->category)) $this->category = $object->category;
+        if (isset($object->user)) $this->author = new User((object) $object->user);
+        if (isset($object->created_at)) $this->createdAt = $object->created_at;
+        if (isset($object->updated_at)) $this->updatedAt = $object->updated_at;
     }
 
     private function getId()
