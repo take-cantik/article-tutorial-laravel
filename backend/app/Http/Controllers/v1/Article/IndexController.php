@@ -19,6 +19,6 @@ class IndexController extends Controller
 
         $articles = $indexUsecase->execute($getListDto);
 
-        return view()->with(['articles' => $presenter->output($articles)]);
+        return view('articles.index')->with(['articles' => $presenter->output($articles)]);
     }
 }
