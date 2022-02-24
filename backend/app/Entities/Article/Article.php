@@ -14,7 +14,7 @@ class Article
     private string $createdAt;
     private string $updateAt;
 
-    private function __construct(object $object)
+    public function __construct(object $object)
     {
         if (isset($object->id)) $this->id = $object->id;
         if (isset($object->title)) $this->title = $object->title;

@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => '/admin', 'as' => 'articles.'], function () {
+Route::group(['prefix' => '/articles', 'as' => 'articles.'], function () {
     require __DIR__ . '/web/article.php';
 });

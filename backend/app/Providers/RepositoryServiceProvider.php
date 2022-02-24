@@ -15,7 +15,7 @@ class RepositoryServiceProvider extends ServiceProvider
     {
         $this->app->bind(
             \App\Repositories\ArticleRepositoryInterface::class,
-            \App\Repositories\Elqouent\ArticleRepository::class,
+            \App\Repositories\Eloquent\ArticleRepository::class,
         );
     }
 

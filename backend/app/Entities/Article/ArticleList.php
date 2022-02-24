@@ -9,7 +9,7 @@ class ArticleList
     public function __construct(array $articles)
     {
         $this->articles = array_map(function ($article) {
-          return new Article((object) $article);
+            return new Article((object) $article);
         }, $articles);
     }
 
