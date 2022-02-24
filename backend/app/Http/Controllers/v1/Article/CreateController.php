@@ -9,6 +9,6 @@ class CreateController extends Controller
 {
     public function __invoke(): View
     {
-        // return view();
+        return view('articles.create');
     }
 }
