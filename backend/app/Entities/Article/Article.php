@@ -8,7 +8,7 @@ class Article
     private string $title;
     private string $body;
     private int $category;
-    private int $userId;
+    private int $authorId;
     private string $createdAt;
     private string $updateAt;
 
@@ -18,7 +18,7 @@ class Article
         if (isset($article->title)) $this->title = $article->title;
         if (isset($article->body)) $this->body = $article->body;
         if (isset($article->category)) $this->category = $article->category;
-        if (isset($article->user_id)) $this->userId = $article->user_id;
+        if (isset($article->user_id)) $this->authorId = $article->user_id;
         if (isset($article->created_at)) $this->createdAt = $article->created_at;
         if (isset($article->updated_at)) $this->updatedAt = $article->updated_at;
     }
@@ -43,9 +43,9 @@ class Article
         return $this->category;
     }
 
-    private function getUserId()
+    private function getAuthorId()
     {
-        return $this->userId;
+        return $this->authorId;
     }
 
     private function getCreatedAt()
