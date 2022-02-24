@@ -8,15 +8,20 @@ use App\Http\Dtos\Article\GetListDto;
 use App\Http\Dtos\Article\FindByIdDto;
 use App\Http\Dtos\Article\CreateDto;
 use App\Http\Dtos\Article\UpdateDto;
+use App\Entities\Article\ArticleList;
+use App\Entities\Article\Article;
 
 class ArticleRepository implements ArticleRepositoryInterface
 {
-    public function getArticleList(GetListDto $getListDto)
+    public function getArticleList(GetListDto $getListDto): ArticleList
     {
-        //
+        $articles = ArticleModel::offset($getListDto->page * $getListDto->limit)
+            ->limit($getListDto->limit);
+
+        return new ArticleList((array) $articles);
     }
 
-    public function getArticle(FindByIdDto $findByIdDto)
+    public function getArticle(FindByIdDto $findByIdDto): Article
     {
         //
     }
