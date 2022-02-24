@@ -28,7 +28,14 @@ class ArticleRepository implements ArticleRepositoryInterface
 
     public function createArticle(CreateDto $createDto)
     {
-        //
+        $createRef = ArticleModel::create([
+            'title' => $createDto->title,
+            'body' => $createDto->body,
+            'category' => $createDto->category,
+            'user_id' => $createDto->userId
+        ]);
+
+        return $createRef;
     }
 
     public function updateArticle(UpdateDto $updateDto)
