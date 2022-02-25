@@ -7,7 +7,7 @@
       作成
     </a>
     @foreach($articles as $article)
-      <h1>{{$articles}}</h1>
+      <h1>{{$article['title']}}</h1>
     @endforeach
   </div>
 @endsection

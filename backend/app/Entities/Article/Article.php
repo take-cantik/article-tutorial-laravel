@@ -10,6 +10,7 @@ class Article
     private string $title;
     private string $body;
     private int $category;
+    private int $authorId;
     private User $author;
     private string $createdAt;
     private string $updateAt;
@@ -20,6 +21,7 @@ class Article
         if (isset($object->title)) $this->title = $object->title;
         if (isset($object->body)) $this->body = $object->body;
         if (isset($object->category)) $this->category = $object->category;
+        if (isset($object->user_id)) $this->authorId = $object->user_id;
         if (isset($object->user)) $this->author = new User((object) $object->user);
         if (isset($object->created_at)) $this->createdAt = $object->created_at;
         if (isset($object->updated_at)) $this->updatedAt = $object->updated_at;
@@ -43,6 +45,11 @@ class Article
     public function getCategory()
     {
         return $this->category;
+    }
+
+    public function getAuthorId()
+    {
+        return $this->authorId;
     }
 
     public function getAuthor()

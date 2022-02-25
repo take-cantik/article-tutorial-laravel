@@ -15,8 +15,10 @@ class ArticleRepository implements ArticleRepositoryInterface
 {
     public function getArticleList(GetListDto $getListDto): ArticleList
     {
-        $articles = ArticleModel::offset($getListDto->page * $getListDto->limit)
-            ->limit($getListDto->limit)->get();
+        $articles = ArticleModel::with('user')
+            ->offset(($getListDto->page - 1) * $getListDto->limit)
+            ->limit($getListDto->limit)
+            ->get();
 
         return new ArticleList($articles->toArray());
     }

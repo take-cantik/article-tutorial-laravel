@@ -15,12 +15,12 @@ class IndexPresenter
             $author = $article->getAuthor();
 
             return [
-              'id' => $article->getId(),
-              'title' => $article->getTitle(),
-              'body' => $article->getBody(),
-              'category' => $article->getCategory(),
-              'authorId' => $author->getId(),
-              'authorName' => $author->getName()
+                'id' => $article->getId(),
+                'title' => $article->getTitle(),
+                'body' => $article->getBody(),
+                'category' => $article->getCategory(),
+                'authorId' => $author->getId(),
+                'authorName' => $author->getName()
             ];
         }, $articleList->getArticleList());
     }
