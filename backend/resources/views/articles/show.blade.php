@@ -11,6 +11,6 @@
     </a>
     <h1>{{ $article['title'] }}</h1>
     <p>{{ $article['body'] }}</p>
-    <p>{{ $article->user['name'] }}</p>
+    <p>{{ $article['authorName'] }}</p>
   </div>
 @endsection
