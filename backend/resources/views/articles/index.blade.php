@@ -7,7 +7,9 @@
       作成
     </a>
     @foreach($articles as $article)
-      <h1>{{$article['title']}}</h1>
+      <a href="{{ route('articles.show', ['articleId' => $article['id']]) }}">
+        {{$article['title']}}
+      </a>
     @endforeach
   </div>
 @endsection
