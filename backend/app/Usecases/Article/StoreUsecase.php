@@ -16,6 +16,6 @@ class StoreUsecase
 
     public function execute(CreateDto $createDto)
     {
-        return $articleRepository->createArticle($createDto);
+        return $this->articleRepository->createArticle($createDto);
     }
 }
