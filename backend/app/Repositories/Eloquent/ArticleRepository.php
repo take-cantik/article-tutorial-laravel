@@ -25,7 +25,8 @@ class ArticleRepository implements ArticleRepositoryInterface
 
     public function getArticle(FindByIdDto $findByIdDto): Article
     {
-        $article = ArticleModel::find($findByIdDto->id);
+        $article = ArticleModel::with('user')
+            ->findOrFail($findByIdDto->articleId);
 
         return new Article($article);
     }

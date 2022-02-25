@@ -20,7 +20,7 @@ class User
         if (isset($object->name)) $this->name = $object->name;
         if (isset($object->email)) $this->email = $object->email;
         if (isset($object->password)) $this->password = $object->password;
-        if (isset($object->articles)) $this->articles = new ArticleList($object->articles);
+        if (isset($object->articles)) $this->articles = (array) new ArticleList($object->articles->toArray());
         if (isset($object->created_at)) $this->createdAt = $object->created_at;
         if (isset($object->updated_at)) $this->updatedAt = $object->updated_at;
     }
