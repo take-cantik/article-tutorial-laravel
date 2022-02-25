@@ -27,7 +27,7 @@ class CreateRequest extends FormRequest
             'title' => ['required', 'string'],
             'body' => ['required', 'string'],
             'category' => ['required', 'integer'],
-            'userId' => ['required', 'integer']
+            'authorId' => ['required', 'integer']
         ];
     }
 }

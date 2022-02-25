@@ -37,7 +37,7 @@ class ArticleRepository implements ArticleRepositoryInterface
             'title' => $createDto->title,
             'body' => $createDto->body,
             'category' => $createDto->category,
-            'user_id' => $createDto->userId
+            'user_id' => $createDto->authorId
         ]);
 
         return $createRef;

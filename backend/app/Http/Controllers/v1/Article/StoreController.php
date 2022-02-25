@@ -16,7 +16,7 @@ class StoreController extends Controller
             'title' => $request->title,
             'body' => $request->body,
             'category' => $request->category,
-            'userId' => $request->userId
+            'authorId' => $request->userId
         ]);
 
         $result = $usecase->execute($createDto);

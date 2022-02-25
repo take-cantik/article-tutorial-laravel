@@ -9,7 +9,7 @@ class CreateDto extends BaseDto
     public string $title;
     public string $body;
     public int $category;
-    public int $userId;
+    public int $authorId;
 
     public function __construct(array $array)
     {

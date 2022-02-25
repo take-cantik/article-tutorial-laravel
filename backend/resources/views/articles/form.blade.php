@@ -4,6 +4,6 @@
 {!! Form::textarea('body', null) !!}
 {!! Form::label('category', 'カテゴリー') !!}
 {!! Form::number('category', null) !!}
-{!! Form::label('userId', 'ユーザーID') !!}
-{!! Form::number('userId', null) !!}
+{!! Form::label('authorId', 'ユーザーID') !!}
+{!! Form::number('authorId', null) !!}
 {!! Form::submit('登録') !!}
