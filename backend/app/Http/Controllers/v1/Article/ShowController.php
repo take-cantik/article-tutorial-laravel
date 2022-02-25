@@ -6,11 +6,11 @@ use App\Http\Controllers\Controller;
 use Illuminate\View\View;
 use App\Http\Dtos\Article\FindByIdDto;
 use App\Usecases\Article\ShowUsecase;
-use App\Http\Presenters\Article\ShowPresenter;
+use App\Http\Presenters\Article\FindByIdPresenter;
 
 class ShowController extends Controller
 {
-    public function __invoke(int $articleId, ShowUsecase $usecase, ShowPresenter $presenter): View
+    public function __invoke(int $articleId, ShowUsecase $usecase, FindByIdPresenter $presenter): View
     {
         $findByIdDto = new FindByIdDto([
             'articleId' => $articleId

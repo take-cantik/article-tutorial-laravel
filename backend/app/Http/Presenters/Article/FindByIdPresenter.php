@@ -6,7 +6,7 @@ namespace App\Http\Presenters\Article;
 
 use App\Entities\Article\Article;
 
-class ShowPresenter
+class FindByIdPresenter
 {
     public function output(Article $article)
     {
