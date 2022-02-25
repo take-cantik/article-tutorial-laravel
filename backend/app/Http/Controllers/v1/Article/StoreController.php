@@ -20,7 +20,6 @@ class StoreController extends Controller
         ]);
 
         $result = $usecase->execute($createDto);
-        dd($result);
 
         return redirect(route('articles.index'));
     }
