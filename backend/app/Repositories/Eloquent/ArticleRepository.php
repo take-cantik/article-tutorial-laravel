@@ -57,6 +57,8 @@ class ArticleRepository implements ArticleRepositoryInterface
 
     public function deleteArticle(FindByIdDto $findByIdDto)
     {
-        //
+        $deleteRef = ArticleModel::where('id', $findByIdDto->id)->delete();
+
+        return $deleteRef;
     }
 }
