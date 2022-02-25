@@ -6,7 +6,7 @@ use App\Http\Dtos\BaseDto;
 
 class UpdateDto extends BaseDto
 {
-    public int $articleId;
+    public int $id;
     public string $title;
     public string $body;
     public int $category;

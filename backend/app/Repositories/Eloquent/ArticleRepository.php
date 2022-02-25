@@ -45,7 +45,14 @@ class ArticleRepository implements ArticleRepositoryInterface
 
     public function updateArticle(UpdateDto $updateDto)
     {
-        //
+        $updateRef = ArticleModel::where('id', $updateDto->id)->update([
+            'title' => $updateDto->title,
+            'body' => $updateDto->body,
+            'category' => $updateDto->category,
+            'user_id' => $updateDto->authorId
+        ]);
+
+        return $updateRef;
     }
 
     public function deleteArticle(FindByIdDto $findByIdDto)
