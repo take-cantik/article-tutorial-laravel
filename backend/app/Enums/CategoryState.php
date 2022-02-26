@@ -2,7 +2,7 @@
 
 namespace App\Enums;
 
-enum Category: int
+enum CategoryState
 {
     case TECHNOLOGY = 0;
     case NEWS = 1;
